@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absen Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1>📚 AbsenKelas</h1>
+        <nav>
+            <a href="index.html" class="active">📋 Absensi</a>
+            <a href="matkul.html">⚙️ Matkul & Dosen</a>
+            <a href="rekap.html">📊 Rekap</a>
+        </nav>
+        <div class="sidebar-footer">© 2025 AbsenKelas</div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <header class="page-header">
+            <h2>Form Absensi Kelas</h2>
+            <p>Isi kehadiran mahasiswa per mata kuliah</p>
+        </header>
+
+        <form class="card" onsubmit="return simpanAbsen(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Mata Kuliah</label>
+                    <select required>
+                        <option value="">-- Pilih Matkul --</option>
+                        <option>IF101 - Pemrograman Web (Dr. Budi Santoso)</option>
+                        <option>IF102 - Basis Data (Siti Aminah, S.T., M.T.)</option>
+                        <option>IF103 - Algoritma (Dr. Budi Santoso)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Tanggal</label>
+                    <input type="date" value="2025-11-25" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Status Kehadiran</label>
+                <div class="status-pills">
+                    <label class="pill hadir"><input type="radio" name="status" checked> Hadir</label>
+                    <label class="pill izin"><input type="radio" name="status"> Izin</label>
+                    <label class="pill sakit"><input type="radio" name="status"> Sakit</label>
+                    <label class="pill alpa"><input type="radio" name="status"> Alpa</label>
+                </div>
+            </div>
+
+            <label class="mhs-title">Pilih Mahasiswa</label>
+            <div class="mhs-list">
+                <label class="mhs-item"><input type="checkbox" checked> <span class="nim">2024001</span> Andi Wijaya</label>
+                <label class="mhs-item"><input type="checkbox" checked> <span class="nim">2024002</span> Rina Kartika</label>
+                <label class="mhs-item"><input type="checkbox"> <span class="nim">2024003</span> Dimas Pratama</label>
+                <label class="mhs-item"><input type="checkbox" checked> <span class="nim">2024004</span> Sari Melati</label>
+                <label class="mhs-item"><input type="checkbox"> <span class="nim">2024005</span> Bayu Saputra</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">💾 Simpan Absensi</button>
+                <button type="reset" class="btn-secondary">Reset</button>
+            </div>
+        </form>
+    </main>
+</div>
+
+<script>
+function simpanAbsen(e) {
+    e.preventDefault();
+    alert("✅ Absensi berhasil disimpan! (tampilan prototipe)");
+}
+</script>
+</body>
+</html>

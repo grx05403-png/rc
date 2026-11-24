@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Absensi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <aside class="sidebar">
+        <h1>📚 AbsenKelas</h1>
+        <nav>
+            <a href="index.html">📋 Absensi</a>
+            <a href="matkul.html">⚙️ Matkul & Dosen</a>
+            <a href="rekap.html" class="active">📊 Rekap</a>
+        </nav>
+        <div class="sidebar-footer">© 2025 AbsenKelas</div>
+    </aside>
+
+    <main class="main">
+        <header class="page-header">
+            <h2>Rekap Kehadiran</h2>
+            <p>Ringkasan kehadiran mahasiswa per mata kuliah</p>
+        </header>
+
+        <div class="card">
+            <div class="form-group">
+                <label>Pilih Mata Kuliah</label>
+                <select>
+                    <option>IF101 - Pemrograman Web</option>
+                    <option>IF102 - Basis Data</option>
+                </select>
+            </div>
+
+            <div class="stats">
+                <div class="stat stat-hadir"><span class="stat-num">12</span><span class="stat-label">Hadir</span></div>
+                <div class="stat stat-izin"><span class="stat-num">2</span><span class="stat-label">Izin</span></div>
+                <div class="stat stat-sakit"><span class="stat-num">1</span><span class="stat-label">Sakit</span></div>
+                <div class="stat stat-alpa"><span class="stat-num">0</span><span class="stat-label">Alpa</span></div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr><th>NIM</th><th>Nama</th><th>Hadir</th><th>Izin</th><th>Sakit</th><th>Alpa</th><th>%</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2024001</td><td>Andi Wijaya</td><td>12</td><td>1</td><td>0</td><td>0</td><td><span class="badge badge-ok">100%</span></td></tr>
+                    <tr><td>2024002</td><td>Rina Kartika</td><td>10</td><td>2</td><td>1</td><td>0</td><td><span class="badge badge-ok">92%</span></td></tr>
+                    <tr><td>2024003</td><td>Dimas Pratama</td><td>8</td><td>1</td><td>0</td><td>4</td><td><span class="badge badge-warn">69%</span></td></tr>
+                    <tr><td>2024004</td><td>Sari Melati</td><td>13</td><td>0</td><td>0</td><td>0</td><td><span class="badge badge-ok">100%</span></td></tr>
+                    <tr><td>2024005</td><td>Bayu Saputra</td><td>6</td><td>0</td><td>1</td><td>6</td><td><span class="badge badge-danger">50%</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+</body>
+</html>
